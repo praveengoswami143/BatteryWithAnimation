@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(14, 14, 49);
+}
+.battery{
+    width: 225px;
+    height: 110px;
+    position: absolute;
+    border: 7px solid #ffffff;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 8px;
+}
+.battery::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 60px;
+    top: 0;
+    right: -25px;
+    bottom: 0;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 0 7px 7px 0;
+}
+.battery::after{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 80px;
+    background-color: #ffffff;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto;
+    border-radius: 2px;
+    box-shadow: 50px 0 transparent,
+                100px 0 transparent,
+                150px 0 transparent;
+    animation: charge 4s infinite;
+}
+@keyframes charge{
+    22%{
+        box-shadow: 50px 0 transparent,
+                100px 0 transparent,
+                150px 0 transparent;
+    }
+    25%{
+        box-shadow: 50px 0 transparent,
+                100px 0 transparent,
+                150px 0 transparent;
+    }
+    42%{
+        box-shadow: 50px 0 #ffffff,
+                100px 0 transparent,
+                150px 0 transparent;
+    }
+    50%{
+        box-shadow: 50px 0 #ffffff,
+                100px 0 #ffffff,
+                150px 0 transparent;
+    }
+    75%{
+        box-shadow: 50px 0 #ffffff,
+                100px 0 #ffffff,
+                150px 0 transparent;
+    }
+    95%{
+        box-shadow: 50px 0 #ffffff,
+                100px 0 #ffffff,
+                150px 0 #ffffff;
+    }
+}
